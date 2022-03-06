@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 09-feb-2021 16:18:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="indexadormp3.Mp3" table="mp3" catalog="archivos" optimistic-lock="version">
+        <id name="idMp3" type="java.lang.Integer">
+            <column name="idMp3" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="album" type="string">
+            <column name="album" length="100" not-null="true" />
+        </property>
+        <property name="artista" type="string">
+            <column name="artista" length="100" not-null="true" />
+        </property>
+        <property name="duracion" type="time">
+            <column name="duracion" length="8" not-null="true" />
+        </property>
+        <property name="estilo" type="string">
+            <column name="estilo" length="100" not-null="true" />
+        </property>
+        <property name="anno" type="string">
+            <column name="anno" length="100" not-null="true" />
+        </property>
+        <property name="ruta" type="string">
+            <column name="ruta" length="200" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
